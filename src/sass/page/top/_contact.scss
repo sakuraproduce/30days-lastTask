@@ -1,0 +1,256 @@
+.contact {
+	background: resolve('contact_bg.png') no-repeat center center / cover;
+	padding: 80px 0;
+
+	@include mq("sp") {
+		padding: 34px $pd-sp;
+	}
+
+	&-head {
+		width: 978px;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 54.5px 0 65px;
+		text-align: center;
+		color: $cr-txt-w;
+		background: resolve('contact_bg-head.png') no-repeat center center / cover;
+		border-radius: 12px 12px 0px 0px;
+
+		@include mq("sp") {
+			padding: 34.5px $pd-sp;
+		}
+	}
+
+	&-heading {
+		font-weight: 600;
+	}
+
+	&-lead {
+		@include font-size(1.6rem, 1.4rem);
+		@include mq("sp") {
+			text-align: left;
+		}
+	}
+
+	&-inner {
+		width: 960px;
+		max-width: 100%;
+		margin: 0 auto;
+		background: $cr-bg-w;
+		padding: 57px 90px;
+		border-radius: 0 0 12px 12px;
+
+		@include mq("sp") {
+			padding: 41px $pd-sp 38px;
+		}
+	}
+
+	&-wrap {
+		width: 35.25%;
+		line-height: 1.85;
+		display: flex;
+		justify-content: space-between;
+
+		@include mq("sp") {
+			width: 100%;
+			justify-content: flex-start;
+			margin-bottom: -0.7px;
+		}
+	}
+
+	//氏名
+	&-name {
+		width: 100%;
+		display: flex;
+		@include font-size(2.2rem, 1.6rem);
+
+		@include mq("sp") {
+			flex-direction: column;
+		}
+	}
+
+	input {
+		width: 64.74%;
+		height: 33px;
+		margin-bottom: 37px;
+		padding: 0.5px;
+		border: 1px solid transparent;
+		border-bottom: 1px solid $cr-m;
+		@include mq("sp") {
+			width: 100%;
+			margin-bottom: 36px;
+		}
+		&::placeholder {
+			padding-left: 10px;
+			@include font-size(2.2rem, 1.6rem);
+		}
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 10px 4px 0px #f9f9fd;
+			border-bottom: 1px solid #3B69FF;
+		}
+	}
+
+	//メールアドレス
+	&-mail {
+		@extend .contact-name;
+	}
+
+	//お問い合わせ種別
+	&-type {
+		@extend .contact-name;
+	}
+
+	select {
+		@extend input;
+		width: 261px;
+		background-image: resolve('contact_arrow-bottom.svg');
+		background-position: right 16px center;
+		background-size: 15px;
+		@include font-size(1.8rem, 1.6rem);
+		padding: 4px 20px;
+		border: 1px solid $cr-m;
+		position: relative;
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 0px 8px #d5d5e6;
+			border: 1px solid #3B69FF;
+		}
+	}
+
+	//メッセージ
+	&-content {
+		@include font-size(2.2rem, 1.6rem);
+		label {
+			display: block;
+		}
+	}
+
+	textarea {
+		@extend input;
+		height: 213px;
+		margin-top: 5px;
+		margin-bottom: 18px;
+		border: 1px solid $cr-m;
+		width: 100%;
+
+		@include mq("sp") {
+			margin-bottom: 9px;
+			height: 161px;
+		}
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 0px 8px #d5d5e6;
+			border: 1px solid #3B69FF;
+		}
+	}
+
+	//性別
+	&-radio {
+		@extend .contact-name;
+		margin-bottom: 33px;
+
+		@include mq("sp") {
+			margin-bottom: 26px;
+		}
+
+		label {
+			margin-right: 24px;
+
+			@include mq("sp") {
+			margin-right: 63px;
+			}
+		}
+	}
+
+	input[type="radio"] + span {
+		margin: 0 30px 0 0;
+		@include mq("sp") {
+			line-height: 2.5;
+		}
+	}
+
+	input[type="radio"]:hover + span {
+		&::before {
+			box-shadow: 0 0px 8px #d5d5e6;
+			border: 1px solid #3B69FF;
+		}
+	}
+
+	//個人情報チェックボックス
+	&-policy {
+		line-height: 1.8;
+		margin-bottom: 20px;
+		@include font-size(1.8rem, 1.6rem);
+
+		@include mq("sp") {
+			margin-bottom: 17px;
+		}
+	}
+
+	input[type="checkbox"]:hover + span {
+		&::before {
+			box-shadow: 0 0px 8px #d5d5e6;
+			border: 1px solid #3B69FF;
+		}
+	}
+
+	input[type="checkbox"]:checked + span {
+		&::after {
+			width: 14px;
+			height: (14px * 0.6);
+			border-left: 2px solid $cr-check_active;
+			border-bottom: 2px solid $cr-check_active;
+			margin-top: -0.1em;
+			left: 3px;
+		}
+	}
+
+	//必須ラベル
+	&-required {
+		height: 24px;
+		text-align: center;
+		box-sizing: content-box;
+		text-decoration: none;
+		margin-right: 80px;
+		margin-top: 7px;
+		display: block;
+		background: #FF4646;
+		border-radius: 5px;
+		color: $cr-bg-w;
+		@include font-size(1.6rem, 1.4rem);
+		width: 55px;
+
+		@include mq("sp") {
+		margin-left: 20px;
+		margin-top: 3px;
+		}
+	}
+
+	//送信ボタン
+	&-btn {
+		@include mq("sp") {
+			text-align: center;
+		}
+
+		button {
+			@include btn(174px, 10px, 13px, 1.8rem);
+			position: relative;
+			font-weight: bold;
+			box-shadow: 0px 3px 5px #00000033;
+
+			&:hover {
+				background: #F18900;
+				opacity: 1;
+			}
+
+			@include mq("sp") {
+				width: 39%;
+				text-align: center;
+			}
+		}
+	}
+}

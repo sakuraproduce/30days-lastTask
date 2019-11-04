@@ -1,0 +1,85 @@
+.comments {
+	background: linear-gradient(90deg,$cr-m 0%,$cr-m 71.7%,$cr-bg-g 71.7%,$cr-bg-g 100%);
+
+	@include mq("sp") {
+		background: $cr-m;
+	}
+
+	&-outer {
+		display: flex;
+		justify-content: center;
+	}
+
+	&-inner {
+		width: 47.1%;
+		background: $cr-bg-w;
+		padding: 0 40px 52px;
+		position: relative;
+		top: -126px;
+		box-shadow: 0px 0px 10px #00000029;
+
+		@include mq("tab") {
+			width: 50%;
+			padding-left: $pd-tab;
+			padding-right: $pd-tab;
+		}
+
+		@include mq("sp") {
+			width: 91%;
+			padding: 0 $pd-sp 9px;
+			top: -60px;
+		}
+	}
+
+	&-heading {
+		padding: 49px 0 75px;
+		font-weight: 600;
+
+		@include mq("sp") {
+			padding: 34px 0 34px;
+		}
+	}
+
+	&-wrap {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 80px;
+
+		@include mq("sp") {
+			padding-bottom: 30px;
+		}
+	}
+
+	&-photo {
+		width: 300px;
+		height: auto;
+
+		@include mq("sp") {
+			padding-left: 3px;
+			width: 283px;
+			height: auto;
+		}
+	}
+
+	&-text {
+		padding-left: 53px;
+		padding-right: 5px;
+		@include font-size(1.6rem, 1.4rem);
+
+		@include mq("sp") {
+			padding-left: 26px;
+			padding-right: 6px;
+		}
+	}
+
+	&-bg {
+		width: 39.3%;
+		height: auto;
+		position: relative;
+		top: -25px;
+
+		@include mq("sp") {
+			display: none;
+		}
+	}
+}

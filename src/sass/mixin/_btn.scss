@@ -1,0 +1,32 @@
+// ボタン
+@mixin btn(
+	$width: 100%,
+	$border-radius: 12px,
+	$padding: 0.8em,
+	$font-size: 1.6rem,
+	$background: $cr-a,
+	$color:$cr-txt-w,
+  
+	) {
+
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+
+		width: $width;
+		border-radius: $border-radius;
+		-webkit-border-radius: $border-radius;
+		-moz-border-radius: $border-radius;
+		-ms-border-radius: $border-radius;
+		-o-border-radius: $border-radius;
+		padding: $padding;
+		font-size: $font-size;
+		background: $background;
+		color: $color;
+
+		&:hover {
+			opacity: $opacity;
+		}
+
+}
+

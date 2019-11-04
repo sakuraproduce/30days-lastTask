@@ -1,0 +1,82 @@
+.price {
+	background: $cr-bg-g;
+
+	&-heading {
+		padding: 74px 0;
+		text-align: center;
+		font-weight: 600;
+
+		@include mq("sp") {
+			padding: 34px 0;
+		}
+	}
+
+	&-inner {
+		width: 960px;
+		max-width: 100%;
+		margin: 0 auto;
+		padding-bottom: 274px;
+
+		@include mq("tab") {
+			padding-left: $pd-tab;
+			padding-right: $pd-tab;
+		}
+
+		@include mq("sp") {
+			padding-left: $pd-sp;
+			padding-right: $pd-sp;
+			padding-bottom: 120px;
+		}
+	}
+
+	&-table {
+		border: 1px solid #707070;
+		table-layout: fixed;
+		margin: 0 auto;
+		margin-bottom: 24px;
+
+		@include mq("sp") {
+			margin-bottom: 12px;
+		}
+
+		tr {
+			border: 1px solid #707070;
+			height: 60px;
+		}
+
+		th {
+			border: 1px solid #707070;
+			color: $cr-txt-w;
+			background: $cr-m;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 2.4rem;
+			font-weight: 600;
+
+			@include mq("sp") {
+				font-size: 2rem;
+			}
+
+			&:first-child {
+				width: 30%;
+			}
+		}
+
+		td {
+			border: 1px solid #707070;
+			text-align: left;
+			vertical-align: middle;
+			padding: 4px 41px;
+			font-size: 2.4rem;
+
+			@include mq("sp") {
+				font-size: 2rem;
+				padding: 4px 19px;
+			}
+		}
+	}
+
+	&-text {
+		font-size: 1.2rem;
+	}
+}

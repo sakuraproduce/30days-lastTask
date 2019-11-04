@@ -1,0 +1,135 @@
+.results {
+	background: linear-gradient(90deg,$cr-bg-g 0%,$cr-bg-g 7%,$cr-m 7%,$cr-m 100%);
+	padding-bottom: 80px;
+	max-width: 100%;
+	overflow: hidden;
+
+	@include mq("sp") {
+		background: $cr-m;
+		padding-bottom: 40px;
+	}
+
+	&-heading {
+		padding: 74px 0 74px 110px;
+		margin-left: 93px;
+		color: $cr-txt-w;
+		width: 100%;
+		font-weight: 600;
+
+		@include mq("sp") {
+			margin: 0;
+			padding: 32px 0 34px 130px;
+		}
+	}
+
+	&-inner {
+		margin-bottom: 40px;
+		width: 1346px;
+		// width: 2732px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include mq("sp") {
+			width: 877.45px;
+			margin-bottom: 7px;
+		}
+	}
+
+	&-title {
+		@include font-size(2rem, 1.5rem);
+		background: $cr-bg-w;
+		padding: 17px 23px;
+		font-weight: bold;
+
+		@include mq("sp") {
+			padding: 10px 10px;
+		}
+	}
+
+	&-text {
+		@include font-size(1.6rem, 1.2rem);
+		background: $cr-bg-w;
+		padding: 0 23px 20px;
+
+		@include mq("sp") {
+		padding: 0 15px 14px 12px;
+		}
+	}
+
+	&-btn {
+		display: flex;
+		padding-left: 204px;
+		text-align: center;
+
+		@include mq("sp") {
+			padding-left: 16px;
+			text-align: center;
+		}
+
+		a {
+			@include font-size(2rem, 1.8rem);
+			transition: all 0.3s ease 0s;
+			text-decoration: none;
+			@include btn(301px, 0px, 1.5rem, 2rem, $cr-m, $cr-txt-w);
+			border: 1px solid $cr-txt-w;
+			letter-spacing: 0.4rem;
+			font-weight: 600;
+
+			@include mq("sp") {
+				width: 95%;
+				padding: 1.2rem;
+			}
+
+			&:hover {
+				background: $cr-bg-w;
+				color: $cr-txt;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.swiper-container {
+	padding-bottom: 78.83px;
+	left: 15%;
+
+	@include mq("sp") {
+		left: 2%;
+	}
+
+	.swiper-slide {
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+
+	.swiper-pagination-bullets {
+		bottom: 5px;
+		left: -43.4%;
+
+		@include mq("sp") {
+		bottom: 30px;
+		left: -31%;
+		}
+	}
+
+	.swiper-pagination-bullet {
+		width: 12px;
+		height: 12px;
+		margin: 0 9px!important;
+		background: $cr-txt-w;
+		opacity: 1;
+	}
+
+	.swiper-pagination-bullet-active {
+		width: 20px;
+		height: 20px;
+		border: solid 4px $cr-txt;
+		border-radius: 60px;
+		box-shadow: 0 0 0 2px $cr-txt-w;
+		position: relative;
+		top: 4px;
+	}
+}
+

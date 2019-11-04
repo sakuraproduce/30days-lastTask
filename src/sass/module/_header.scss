@@ -1,0 +1,147 @@
+.header {
+	position: fixed;
+	width: 100%;
+	@include z-index(header);
+	background: #bcbcbd;
+	height: $header-height;
+	padding-left: 25.25%;
+
+	@include mq("tab") {
+		padding-left: 15%;
+	}
+	@include mq("sp") {
+		display: flex;
+		justify-content: space-between;
+		padding: 2.1rem $pd-sp;
+		height: $header-height-sp;
+	}
+
+	&-logo {
+		width: 200px;
+		display: none;
+		@include mq("sp") {
+			display: block;
+		}
+
+		&:hover {
+			opacity: $opacity;
+		}
+	}
+
+	.drawer-hamburger {
+		display: none;
+		top: 1%;
+		right: 2%!important;
+		width: 26px;
+
+		@media (max-width: 767px) {
+			display: block;
+		}
+	}
+
+	&-nav {
+		display: block;
+		@include mq("sp") {
+			display: none;
+		}
+	}
+
+	&-list {
+		list-style: none;
+	}
+
+	&-item {
+		display: inline-block;
+	}
+
+	&-item + &-item {
+		margin-left: 37px;
+
+		@include mq("tab") {
+			margin-left: 30px;
+		}
+	}
+
+	&-item a{
+		font-weight: 500;
+		letter-spacing: -0.04rem;
+		margin-top: 2.8rem;
+		display: inline-block;
+		text-decoration: none;
+		border-bottom: 1px solid transparent; //hover時のがたつきをなくす
+		&:hover {
+			border-bottom: 1px solid $cr-m;
+		}
+	}
+
+	.js-header-item-active {
+		border-bottom: 1px solid $cr-m;
+	}
+
+	.drawer-nav {
+		display: none;
+		color:$cr-txt;
+		width: 300px; //幅の指定、全画面なら100%
+		z-index: 40;
+		text-align: center;
+
+    @media (max-width: 767px) {
+			display: block;
+		}
+	}
+
+	.drawer-menu {
+		padding-top: 62%;
+	}
+
+  .drawer-menu-item{
+		position: relative;
+    font-size: 1.7rem;
+
+		a {
+			text-decoration: none;
+		}
+  }
+}
+
+.drawer-open {
+	.drawer-hamburger{
+		right: 30rem!important; //ハンバーガーメニュー表示位置
+		position: absolute;
+		padding: 15px 1.75rem 30px;
+
+		.header-icon {
+			display: none;
+		}
+
+		&:before {
+			font-family: "Font Awesome 5 Free";
+			content: '\f00d';
+			font-weight: 900;
+			color: white;
+			font-size: 3rem;
+		}
+	}
+  // ヘッダーとロゴが上に表示されるため背景色と非表示へ
+	header {
+		background-color:  #000000;
+		.header-logo,
+		.headr-icon {
+			display: none;
+		}
+	}
+}
+
+.drawer--right .drawer-nav {
+	right: -30rem; //drawer-navの幅のマイナス値
+}
+
+.drawer-overlay {
+	background-color: rgba(0,0,0,0.5);
+}
+
+
+
+
+
+

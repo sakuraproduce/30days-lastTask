@@ -1,0 +1,21 @@
+//枠線の色
+$cr-form-bd: #707070;
+//focus時の色
+$cr-form-bd_avtive: #707070;
+
+//radioの内丸の色
+$cr-check: #3B69FF;
+//checkboxのマークの色
+$cr-check_active: #3B69FF;
+
+//checkboxの幅・高さ＆マークの幅や高さ（高さはbase.scssで$size-checkbox:0.6に指定）
+$size-checkbox: 20px;
+//checkboxのマーク左端からテキストの左端までの長さ
+$size-checkbox-pd_left: 41px;
+
+//radio外丸の幅・高さ＆選択時のleftの計算に用いる
+$size-radio: 12px;
+//radioの内丸の幅・高さ
+$size-radio_active: 6px;
+//radioの左端からテキスト左端までの長さ
+$size-radio-pd_left: 27px;

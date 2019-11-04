@@ -1,0 +1,25 @@
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// z-index
+@mixin z-index($key) {
+	z-index: map-get($layer, $key);
+}
+
+//レスポンシブiframe
+@mixin rwd-iframe($width: 16, $height: 9) {
+	position: relative;
+	padding-top: percentage($height / $width);
+
+	>iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%!important;
+		height: 100%!important;
+	}
+}
